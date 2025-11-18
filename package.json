@@ -3,15 +3,22 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  
+  "dependencies": {
+    "@excalidraw/excalidraw": "^0.18.0",
+    "ws": "^8.13.0",
+    "nodemon": "^3.1.11",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "preview": "vite preview",
+    "start-server": "node server/y-websocket-server.js",
+    "dev-server": "nodemon server/y-websocket-server.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

@@ -1,16 +1,42 @@
-# React + Vite
+# Excalidraw Local Collaboration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple local-only collaborative Excalidraw setup using:
 
-Currently, two official plugins are available:
+1. WebSocket server (y-websocket-server.js)
+2. Vite-powered React frontend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Real-time drawing sync across multiple browser tabs/windows on localhost.
 
-## React Compiler
+# Getting Started
+1. Install
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Run Server
+npm run dev-server
 
-## Expanding the ESLint configuration
+Server listens on ws://localhost:1234.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Run Frontend
+npm run dev
+
+4. Open http://localhost:5173 in multiple tabs to test collaboration.
+
+5. Sharing Rooms
+
+Click Share → generates a unique room URL
+
+Open the same URL in another tab to collaborate in real time
+
+# Notes
+
+Local-only, no database or auth
+Server resets on restart
+Optimized for local development Only
+
+# Special Notes
+
+I didnt get much time since I am currently on vacation, hence I was unable to deploy this.
+I have made this application for local purpose only
+This application is using the websockets for the real time syncing of drawings and file system for persistence
+
+1 thing I was unable to do was: On closing the tab, and then opening it, the drawings should persist. 

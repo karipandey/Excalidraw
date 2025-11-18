@@ -1,5 +1,11 @@
+import ExcalidrawComponent from "./Excalidraw";
+
 function App() {
-  return <>Test</>;
+  return (
+    <>
+      <ExcalidrawComponent />
+    </>
+  );
 }
 
 export default App;
